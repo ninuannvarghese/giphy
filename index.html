@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Giphygram</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0, user-scalable=0">
+
+        <meta name="apple-mobile-web-app-title" content="Giphygram">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-startup-image" href="images/launch.png">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="images/icons/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="images/icons/favicon-128.png" sizes="128x128">
+
+        <meta name="msapplication-TileColor" content="#2D91F8">
+        <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png">
+        <meta name="msapplication-square70x70logo" content="images/icons/mstile-70x70.png">
+        <meta name="msapplication-square150x150logo" content="images/icons/mstile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="images/icons/mstile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="images/icons/mstile-310x310.png">
+
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <script defer src="vendor/jquery.min.js"></script>
+        <script defer src="main.js"></script>
+
+        <style>
+            .spinner {
+                animation-name: spin;
+                animation-duration: 2000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes spin {
+                from { transform:rotate(0deg); }
+                to {transform:rotate(360deg); }
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Nav Header -->
+        <header class="navbar sticky-top navbar-expand bg-primary navbar-dark">
+            <!-- Logo -->
+            <img src="images/logo.png" alt="Giphygram" width="60" class="img-fluid navbar-brand">
+
+            <div id="update" class="ml-auto">
+                <a class="icon" href="#update"><img width="25" src="images/flame.png"></a>
+                <img class="icon d-none spinner" width="20" src="images/sync.png">
+            </div>
+
+        </header>
+
+        <!-- Main Conatainer -->
+        <main class="container p-1">
+
+            <!-- Error Alert -->
+            <div class="alert alert-danger text-center m-1" style="display:none;">
+                Could not update Giphy's
+            </div>
+
+            <!-- Giphys -->
+            <div id="giphys" class="row no-gutters"></div>
+
+        </main>
+    </body>
+
+</html>
